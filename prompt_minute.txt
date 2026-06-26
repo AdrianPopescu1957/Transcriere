@@ -1,0 +1,14 @@
+Transcrierea completă a unei ședințe în limba română se generează minutele ședinței cu următoarea structură:
+
+1. Data și locul ședinței
+2. Participanți
+3. Ordinea de zi
+4. Discuții pe puncte
+5. Decizii adoptate
+6. Sarcini și responsabili
+7. Termene
+
+INSTRUCȚIUNI:
+- Nu inventa informații care nu apar în transcriere
+- Fii concis, tehnic și neutru
+- La final, oferă un sumar de maximum 5 rânduri
