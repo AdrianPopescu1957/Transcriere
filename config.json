@@ -1,0 +1,11 @@
+{
+  "whisper_cpp": {
+    "path": "/path/to/whisper.cpp/build/bin",
+    "model": "/path/to/whisper.cpp/models/ggml-small.bin",
+    "language": "ro"
+  },
+  "ollama": {
+    "model": "mistral"
+  },
+  "prompt_file": "prompt_minute.txt"
+}
