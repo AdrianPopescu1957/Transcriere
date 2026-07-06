@@ -13,7 +13,26 @@ if ERRORLEVEL 1 (
   exit /b 1
 )
 
-REM Încearcă puncte de intrare obișnuite
+REM Încearcă puncte de intrare cunoscute din repo (prioritate pentru minutes_generator)
+if exist "minutes_generator.py" (
+  echo Rularea minutes_generator.py...
+  python minutes_generator.py %*
+  exit /b %ERRORLEVEL%
+)
+
+if exist "pipeline.py" (
+  echo Rularea pipeline.py...
+  python pipeline.py %*
+  exit /b %ERRORLEVEL%
+)
+
+if exist "transcriber.py" (
+  echo Rularea transcriber.py...
+  python transcriber.py %*
+  exit /b %ERRORLEVEL%
+)
+
+REM Alte entrypoint-uri posibile
 if exist "main.py" (
   echo Rularea main.py...
   python main.py %*
@@ -32,7 +51,7 @@ if exist "app.py" (
   exit /b %ERRORLEVEL%
 )
 
-echo Nu s-a gasit un punct de intrare cunoscut (main.py, src\main.py, app.py).
-echo Editeaza run_test.bat daca proiectul tau are alt entrypoint.
+echo Nu s-a gasit un punct de intrare cunoscut (minutes_generator.py, pipeline.py, transcriber.py, main.py, src\main.py, app.py).
+echo Editeaza run_test.bat daca proiectul tau are alt entrypoint sau ruleaza manual comanda dorita.
 pause
 exit /b 2
