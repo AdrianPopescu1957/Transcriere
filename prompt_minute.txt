@@ -1,3 +1,6 @@
+Fișier de ajutor: Generare minute ședință
+Director proiect: D:/Proiecte/IA/Transcriere
+
 Transcrierea completă a unei ședințe în limba română se generează minutele ședinței cu următoarea structură:
 
 1. Data și locul ședinței
